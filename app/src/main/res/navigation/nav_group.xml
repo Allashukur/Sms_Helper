@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_group"
+    app:startDestination="@id/dateFragment">
+    <fragment
+        android:id="@+id/dateFragment"
+        android:name="com.example.smshelper.ui.DateFragment"
+        android:label="fragment_date"
+        tools:layout="@layout/fragment_date" >
+        <action
+            android:id="@+id/action_dateFragment_to_provinceFragment"
+            app:destination="@id/provinceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/provinceFragment"
+        android:name="com.example.smshelper.ui.ProvinceFragment"
+        android:label="fragment_province"
+        tools:layout="@layout/fragment_province" >
+        <action
+            android:id="@+id/action_provinceFragment_to_workersFragment"
+            app:destination="@id/workersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workersFragment"
+        android:name="com.example.smshelper.ui.WorkersFragment"
+        android:label="fragment_workers"
+        tools:layout="@layout/fragment_workers" />
+</navigation>
